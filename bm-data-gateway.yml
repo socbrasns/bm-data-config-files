@@ -18,7 +18,5 @@ spring:
 springdoc:
   swagger-ui:
     urls:
-    - url: http://localhost:8080/v3/api-docs
-      name: GateWay
     - url: http://localhost:8080/bm-data-api/v3/api-docs
       name: Benchmarker Data API
