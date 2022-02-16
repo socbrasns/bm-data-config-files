@@ -1,0 +1,24 @@
+management:
+  endpoint:
+    gateway:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: gateway,info,openapi,swaggerui
+spring:
+  application:
+    name: bm-data-gateway
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+          lower-case-service-id: true
+springdoc:
+  swagger-ui:
+    urls:
+    - url: http://localhost:8080/v3/api-docs
+      name: GateWay
+    - url: http://localhost:8080/bm-data-api/v3/api-docs
+      name: Benchmarker Data API
