@@ -7,13 +7,21 @@ spring:
         locator:
           enabled: true
           lower-case-service-id: true
+  boot:
+    admin:
+      client:
+        url:
+        - http://localhost:8765
+management:
+  endpoint:
+    health:
+      show-details: always
+  endpoints:
+    web:
+      exposure:
+        include : '*'
 springdoc:
   swagger-ui:
     urls:
     - url: http://localhost:8080/bm-data-api/v3/api-docs
       name: Benchmarker Data API
-management:
-  endpoints:
-    web:
-      exposure:
-        include: '*'

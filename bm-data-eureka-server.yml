@@ -11,8 +11,16 @@ server:
 spring:
   application:
     name: bm-data-eureka-server
+  boot:
+    admin:
+      client:
+        url:
+        - http://localhost:8765
 management:
+  endpoint:
+    health:
+      show-details: always
   endpoints:
     web:
       exposure:
-        include: '*'
+        include : '*'
