@@ -12,3 +12,8 @@ springdoc:
     urls:
     - url: http://localhost:8080/bm-data-api/v3/api-docs
       name: Benchmarker Data API
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'

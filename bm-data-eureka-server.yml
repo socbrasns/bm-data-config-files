@@ -11,3 +11,8 @@ server:
 spring:
   application:
     name: bm-data-eureka-server
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
