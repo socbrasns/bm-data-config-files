@@ -7,7 +7,7 @@ eureka:
   instance:
     hostname: localhost
 server:
-  port: 8761
+  port: 5000
 spring:
   application:
     name: bm-data-eureka-server
