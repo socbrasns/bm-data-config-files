@@ -3,12 +3,6 @@ server:
 spring:
   application:
     name: Benchmarker Data API
-  cloud:
-    gateway:
-      discovery:
-        locator:
-          enabled: true
-          lower-case-service-id: true
   datasource:
     driverClassName: org.h2.Driver
     password: ''
@@ -22,6 +16,19 @@ spring:
     database-platform: org.hibernate.dialect.H2Dialect
     hibernate:
       ddl-auto: create-drop
+eureka:
+  client:
+    lowercaseHostname: true
+    registryFetchIntervalSeconds: 500
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka
+  instance:
+    hostname: localhost
+    statusPageUrl: https://${eureka.instance.hostname}:${server.port}/actuator/info
+    healthCheckUrl: https://${eureka.instance.hostname}:${server.port}/actuator/health
+    homePageUrl: https://${eureka.instance.hostname}:${server.port}/
 management:
   endpoint:
     health:
