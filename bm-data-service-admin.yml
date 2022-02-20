@@ -5,6 +5,7 @@ server:
   port: 5000
 eureka:
   client:
+    lowercaseHostname: true
     registryFetchIntervalSeconds: 5
     registerWithEureka: true
     fetchRegistry: true
