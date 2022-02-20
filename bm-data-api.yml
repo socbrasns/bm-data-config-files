@@ -3,6 +3,12 @@ server:
 spring:
   application:
     name: Benchmarker Data API
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+          lower-case-service-id: true
   datasource:
     driverClassName: org.h2.Driver
     password: ''
@@ -16,11 +22,6 @@ spring:
     database-platform: org.hibernate.dialect.H2Dialect
     hibernate:
       ddl-auto: create-drop
-  boot:
-    admin:
-      client:
-        url:
-        - http://localhost:8765
 management:
   endpoint:
     health:
