@@ -15,7 +15,6 @@ eureka:
     hostname: bm-data-service-admin.sa-east-1.elasticbeanstalk.com
     nonSecurePort: 80
 management:
-  port: 80
   endpoint:
     health:
       show-details: always
