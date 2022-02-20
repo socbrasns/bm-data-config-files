@@ -13,9 +13,9 @@ eureka:
       defaultZone: http://bm-data-eureka-server.sa-east-1.elasticbeanstalk.com/eureka
   instance:
     hostname: bm-data-service-admin.sa-east-1.elasticbeanstalk.com
-    statusPageUrl: https://${eureka.hostname}/actuator/info
-    healthCheckUrl: https://${eureka.hostname}/actuator/health
-    homePageUrl: https://${eureka.hostname}/
+    statusPageUrl: https://${eureka.instance.hostname}/actuator/info
+    healthCheckUrl: https://${eureka.instance.hostname}/actuator/health
+    homePageUrl: https://${eureka.instance.hostname}/
 management:
   endpoint:
     health:
