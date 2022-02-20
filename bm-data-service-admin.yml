@@ -13,3 +13,4 @@ eureka:
       defaultZone: http://bm-data-eureka-server.sa-east-1.elasticbeanstalk.com/eureka
   instance:
     hostname: bm-data-service-admin.sa-east-1.elasticbeanstalk.com
+    nonSecurePort: 80
