@@ -16,3 +16,11 @@ eureka:
     statusPageUrl: https://${eureka.instance.hostname}:${server.port}/actuator/info
     healthCheckUrl: https://${eureka.instance.hostname}:${server.port}/actuator/health
     homePageUrl: https://${eureka.instance.hostname}:${server.port}/
+management:
+  endpoint:
+    health:
+      show-details: always
+  endpoints:
+    web:
+      exposure:
+        include : '*'
