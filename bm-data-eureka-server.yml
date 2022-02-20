@@ -5,7 +5,7 @@ eureka:
     serviceUrl:
       defaultZone: http://${eureka.instance.hostname}/eureka/
   instance:
-    hostname: localhost
+    hostname: bm-data-eureka-server.sa-east-1.elasticbeanstalk.com
 server:
   port: 5000
 spring:
