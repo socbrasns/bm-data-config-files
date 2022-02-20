@@ -2,7 +2,7 @@ spring:
   application:
     name: bm-data-service-admin
 server:
-  port: 8765
+  port: 5000
 eureka:
   client:
     registryFetchIntervalSeconds: 5
