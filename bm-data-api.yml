@@ -20,11 +20,19 @@ spring:
     database-platform: org.hibernate.dialect.H2Dialect
     hibernate:
       ddl-auto: create-drop
-  boot:
-    admin:
-      client:
-        url:
-        - http://localhost:8765
+eureka:
+  client:
+    lowercaseHostname: true
+    registryFetchIntervalSeconds: 500
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka
+  instance:
+    hostname: localhost
+    statusPageUrl: https://${eureka.instance.hostname}:${server.port}/actuator/info
+    healthCheckUrl: https://${eureka.instance.hostname}:${server.port}/actuator/health
+    homePageUrl: https://${eureka.instance.hostname}:${server.port}/
 management:
   endpoint:
     health:
