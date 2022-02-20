@@ -5,7 +5,7 @@ server:
   port: 8765
 eureka:
   client:
-    registryFetchIntervalSeconds: 5
+    registryFetchIntervalSeconds: 500
     registerWithEureka: true
     fetchRegistry: true
     serviceUrl:
