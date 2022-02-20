@@ -10,7 +10,7 @@ server:
   port: 5000
 spring:
   application:
-    name: bm-data-eureka-server
+    name: BenchMarker Eureka Server
   boot:
     admin:
       client:
