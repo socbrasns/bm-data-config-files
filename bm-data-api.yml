@@ -1,12 +1,8 @@
-logging:
-  level:
-    root: DEBUG
-    web: DEBUG
 server:
-  port: 8090
+  port: 5000
 spring:
   application:
-    name: bm-data-api
+    name: Benchmarker Data API
   datasource:
     driverClassName: org.h2.Driver
     password: ''
