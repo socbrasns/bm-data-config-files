@@ -14,3 +14,11 @@ eureka:
   instance:
     hostname: bm-data-service-admin.sa-east-1.elasticbeanstalk.com
     nonSecurePort: 80
+management:
+  endpoint:
+    health:
+      show-details: always
+  endpoints:
+    web:
+      exposure:
+        include : '*'
