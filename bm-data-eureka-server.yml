@@ -16,7 +16,7 @@ spring:
       client:
         auto-deregistration: true
         instance:
-          service-url: http://localhost:${server.port}
+          service-url: http://bm-data-eureka-server.sa-east-1.elasticbeanstalk.com
           name: BenchMarker Eureka Server
         url:
         - http://bm-data-service-admin.sa-east-1.elasticbeanstalk.com
