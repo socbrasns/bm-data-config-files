@@ -1,5 +1,7 @@
 eureka:
   client:
+    lowercaseHostname: true
+    registryFetchIntervalSeconds: 5
     fetchRegistry: false
     registerWithEureka: false
     serviceUrl:
