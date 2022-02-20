@@ -5,6 +5,7 @@ server:
   port: 8765
 eureka:
   client:
+    lowercaseHostname: true
     registryFetchIntervalSeconds: 500
     registerWithEureka: true
     fetchRegistry: true
@@ -12,3 +13,6 @@ eureka:
       defaultZone: http://localhost:8761/eureka
   instance:
     hostname: localhost
+    statusPageUrl: https://${eureka.instance.hostname}:${server.port}/actuator/info
+    healthCheckUrl: https://${eureka.instance.hostname}:${server.port}/actuator/health
+    homePageUrl: https://${eureka.instance.hostname}:${server.port}/
