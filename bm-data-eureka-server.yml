@@ -14,6 +14,10 @@ spring:
   boot:
     admin:
       client:
+        auto-deregistration: true
+        instance:
+          service-url: http://localhost:8761
+          name: BenchMarker Eureka Server
         url:
         - http://localhost:8765
 management:
