@@ -18,17 +18,12 @@ spring:
       ddl-auto: create-drop
 eureka:
   client:
-    lowercaseHostname: true
-    registryFetchIntervalSeconds: 5
     registerWithEureka: true
     fetchRegistry: true
     serviceUrl:
       defaultZone: http://bm-data-eureka-server.sa-east-1.elasticbeanstalk.com/eureka
   instance:
     hostname: bm-data-api.sa-east-1.elasticbeanstalk.com
-    statusPageUrl: https://${eureka.instance.hostname}/actuator/info
-    healthCheckUrl: https://${eureka.instance.hostname}/actuator/health
-    homePageUrl: https://${eureka.instance.hostname}/
 management:
   endpoint:
     health:
