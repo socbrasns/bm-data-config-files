@@ -3,26 +3,3 @@ spring:
     name: Benchmarker Admin Server
 server:
   port: 5000
-eureka:
-  client:
-    lowercaseHostname: true
-    registryFetchIntervalSeconds: 5
-    registerWithEureka: true
-    fetchRegistry: true
-    serviceUrl:
-      defaultZone: http://bm-data-eureka-server.sa-east-1.elasticbeanstalk.com/eureka
-  instance:
-    hostname: bm-data-service-admin.sa-east-1.elasticbeanstalk.com
-    statusPageUrl: https://${eureka.instance.hostname}/actuator/info
-    healthCheckUrl: https://${eureka.instance.hostname}/actuator/health
-    homePageUrl: https://${eureka.instance.hostname}/
-    nonSecurePort: 80
-management:
-  paort: 80
-  endpoint:
-    health:
-      show-details: always
-  endpoints:
-    web:
-      exposure:
-        include : '*'
