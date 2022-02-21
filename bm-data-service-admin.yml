@@ -18,6 +18,7 @@ eureka:
     homePageUrl: https://${eureka.instance.hostname}/
     nonSecurePort: 80
 management:
+  paort: 80
   endpoint:
     health:
       show-details: always
