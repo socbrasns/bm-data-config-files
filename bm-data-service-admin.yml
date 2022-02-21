@@ -3,24 +3,3 @@ spring:
     name: bm-data-service-admin
 server:
   port: 8765
-eureka:
-  client:
-    lowercaseHostname: true
-    registryFetchIntervalSeconds: 5
-    registerWithEureka: true
-    fetchRegistry: true
-    serviceUrl:
-      defaultZone: http://localhost:8761/eureka
-  instance:
-    hostname: localhost
-    statusPageUrl: https://${eureka.instance.hostname}:${server.port}/actuator/info
-    healthCheckUrl: https://${eureka.instance.hostname}:${server.port}/actuator/health
-    homePageUrl: https://${eureka.instance.hostname}:${server.port}/
-management:
-  endpoint:
-    health:
-      show-details: always
-  endpoints:
-    web:
-      exposure:
-        include : '*'
