@@ -5,6 +5,10 @@ logging:
 server:
   port: 8090
 spring:
+  jpa:
+    properties:
+      hibernate:
+        current_session_context_class: org.springframework.orm.hibernate4.SpringSessionContext
   application:
     name: bm-data-api
   datasource:
