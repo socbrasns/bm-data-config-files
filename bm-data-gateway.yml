@@ -7,19 +7,6 @@ spring:
         locator:
           enabled: true
           lower-case-service-id: true
-  boot:
-    admin:
-      client:
-        auto-deregistration: true
-        instance:
-          service-url: https://bm-data-gateway.herokuapp.com/
-          name: Benchmarker Gateway
-          metadata:
-            user: 
-              name: shaddowuser
-              password: H7T*$
-        url:
-        - http://bm-data-service-admin.herokuapp.com/
 management:
   endpoint:
     health:
