@@ -7,7 +7,7 @@ eureka:
     serviceUrl:
       defaultZone: http://${eureka.instance.hostname}/eureka/
   instance:
-    hostname: bm-data-eureka-server.sa-east-1.elasticbeanstalk.com
+    hostname: bm-data-eureka-server.herokuapp.com
 server:
   port: 8761
 spring:
@@ -18,10 +18,10 @@ spring:
       client:
         auto-deregistration: true
         instance:
-          service-url: http://bm-data-eureka-server.sa-east-1.elasticbeanstalk.com
+          service-url: http://bm-data-eureka-server.herokuapp.com/
           name: BenchMarker Eureka Server
         url:
-        - http://bm-data-service-admin.sa-east-1.elasticbeanstalk.com
+        - http://bm-data-service-admin.herokuapp.com/
 management:
   endpoint:
     health:
