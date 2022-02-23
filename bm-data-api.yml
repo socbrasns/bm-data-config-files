@@ -3,6 +3,19 @@ server:
 spring:
   application:
     name: Benchmarker Data API
+  boot:
+    admin:
+      client:
+        auto-deregistration: true
+        instance:
+          service-url: https://bm-data-api.herokuapp.com/
+          name: Benchmarker Data API
+          metadata:
+            user: 
+              name: shaddowuser
+              password: H7T*$
+        url:
+        - http://bm-data-service-admin.herokuapp.com/
   datasource:
     driverClassName: org.h2.Driver
     password: ''
