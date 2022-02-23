@@ -20,6 +20,10 @@ spring:
         instance:
           service-url: http://bm-data-eureka-server.herokuapp.com/
           name: BenchMarker Eureka Server
+          metadata:
+            user: 
+              name: shaddowuser
+              password: H7T*$
         url:
         - http://bm-data-service-admin.herokuapp.com/
 management:
