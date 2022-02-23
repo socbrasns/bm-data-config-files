@@ -31,5 +31,5 @@ management:
 springdoc:
   swagger-ui:
     urls:
-    - url: http://localhost:8080/bm-data-api/v3/api-docs
+    - url: https://bm-data-gateway.herokuapp.com/bm-data-api/v3/api-docs
       name: Benchmarker Data API
