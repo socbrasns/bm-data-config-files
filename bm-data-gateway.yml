@@ -1,6 +1,6 @@
 spring:
   application:
-    name: bm-data-gateway
+    name: Benchmarker Gateway
   cloud:
     gateway:
       discovery:
