@@ -30,6 +30,9 @@ spring:
     hibernate:
       ddl-auto: create-drop
 eureka:
+  enableSelfPreservation: true
+  registration:
+    enabled: true
   client:
     registerWithEureka: true
     fetchRegistry: true
