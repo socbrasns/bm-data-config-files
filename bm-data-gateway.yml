@@ -10,8 +10,16 @@ spring:
   boot:
     admin:
       client:
+        auto-deregistration: true
+        instance:
+          service-url: https://bm-data-gateway.herokuapp.com/
+          name: Benchmarker Gateway
+          metadata:
+            user: 
+              name: shaddowuser
+              password: H7T*$
         url:
-        - http://localhost:8765
+        - http://bm-data-service-admin.herokuapp.com/
 management:
   endpoint:
     health:
