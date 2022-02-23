@@ -37,6 +37,7 @@ eureka:
       defaultZone: http://bm-data-eureka-server.herokuapp.com/eureka
   instance:
     hostname: bm-data-api.herokuapp.com
+management:
   endpoint:
     health:
       show-details: always
