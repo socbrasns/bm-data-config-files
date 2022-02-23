@@ -1,6 +1,17 @@
 spring:
   application:
     name: bm-data-gateway
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+          lower-case-service-id: true
+  boot:
+    admin:
+      client:
+        url:
+        - http://localhost:8765
 management:
   endpoint:
     health:
