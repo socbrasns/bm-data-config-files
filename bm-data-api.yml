@@ -2,7 +2,7 @@ server:
   port: 8090
 spring:
   application:
-    name: Benchmarker Data API
+    name: bm-data-api
   boot:
     admin:
       client:
@@ -40,6 +40,9 @@ eureka:
       defaultZone: http://bm-data-eureka-server.herokuapp.com/eureka
   instance:
     hostname: bm-data-api.herokuapp.com
+    statusPageUrl: https://${eureka.hostname}/info
+    healthCheckUrl: https://${eureka.hostname}/health
+    homePageUrl: https://${eureka.hostname}/
 management:
   endpoint:
     health:
