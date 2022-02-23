@@ -40,8 +40,8 @@ eureka:
       defaultZone: http://bm-data-eureka-server.herokuapp.com/eureka
   instance:
     hostname: bm-data-api.herokuapp.com
-    statusPageUrl: https://${eureka.hostname}/info
-    healthCheckUrl: https://${eureka.hostname}/health
+    statusPageUrl: https://${eureka.hostname}/actuator/info
+    healthCheckUrl: https://${eureka.hostname}/actuator/health
     homePageUrl: https://${eureka.hostname}/
 management:
   endpoint:
