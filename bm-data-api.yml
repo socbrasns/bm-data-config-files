@@ -40,7 +40,7 @@ eureka:
       defaultZone: http://bm-data-eureka-server.herokuapp.com/eureka
   instance:
     non-secure-port: 80
-    hostname: ${EUREKA_CLIENT_INSTANCE_HOSTNAME} # bm-data-api.herokuapp.com
+    hostname: bm-data-api.herokuapp.com
     statusPageUrl: https://${eureka.hostname}/actuator/info
     healthCheckUrl: https://${eureka.hostname}/actuator/health
     homePageUrl: https://${eureka.hostname}/
