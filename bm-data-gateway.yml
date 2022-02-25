@@ -18,6 +18,9 @@ spring:
             - POST
             - DELETE
             - PUT
+      httpclient:
+        ssl:
+          useInsecureTrustManager: true
   boot:
     admin:
       client:
