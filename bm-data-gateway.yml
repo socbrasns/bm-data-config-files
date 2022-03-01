@@ -8,7 +8,7 @@ spring:
           cfg-keycloak-provider:
             issuer-uri: http://localhost:8080/auth/realms/cfg
         registration:
-          keycloak-bm-data-gateway
+          keycloak-bm-data-gateway:
             provider: cfg-keycloak-provider
             client-id: bm-data-gateway
             client-secret: 7174b51f-0bbb-4948-9087-2268772c084d
