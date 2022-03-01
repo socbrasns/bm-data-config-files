@@ -20,6 +20,10 @@ spring:
         instance:
           service-url: http://localhost:${server.port}
           name: BenchMarker Eureka Server
+          metadata:
+            user: 
+              name: shaddowuser
+              password: H7T*$
         url:
         - http://localhost:8765
 management:
