@@ -1,3 +1,5 @@
+sever
+  port: 8082
 spring:
   application:
     name: bm-data-gateway
@@ -26,7 +28,7 @@ spring:
       client:
         auto-deregistration: true
         instance:
-          service-url: https://localhost:8080/
+          service-url: http://localhost:8082/
           name: Benchmarker Gateway
           metadata:
             user: 
@@ -42,15 +44,16 @@ eureka:
     registerWithEureka: true
     fetchRegistry: true
     serviceUrl:
-      defaultZone: http://bm-data-eureka-server.herokuapp.com/eureka
-      non-secure-port: 80
-      secure-port: 443
+      defaultZone: http://localhost:8761/eureka
+#      non-secure-port: 80
+#      secure-port: 443
   instance:
-    non-secure-port: 80
+#    non-secure-port: 80
+#    secure-port: 443
     hostname: localhost
-    statusPageUrl: https://${eureka.hostname}:${server.port}/actuator/info
-    healthCheckUrl: https://${eureka.hostname}:${server.port}/actuator/health
-    homePageUrl: https://${eureka.hostname}:${server.port}/
+    statusPageUrl: http://${eureka.hostname}:${server.port}/actuator/info
+    healthCheckUrl: http://${eureka.hostname}:${server.port}/actuator/health
+    homePageUrl: http://${eureka.hostname}:${server.port}/
 management:
   endpoint:
     health:
