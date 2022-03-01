@@ -12,7 +12,7 @@ spring:
       client:
         auto-deregistration: true
         instance:
-          service-url: https://localhost:8090/
+          service-url: http://localhost:8090/
           name: Benchmarker Data API
           metadata:
             user: 
@@ -39,12 +39,15 @@ eureka:
     fetchRegistry: true
     serviceUrl:
       defaultZone: http://localhost:8761/eureka
+#      non-secure-port: 80
+#      secure-port: 443
   instance:
-    non-secure-port: 80
+#    non-secure-port: 80
+#    secure-port: 443
     hostname: localhost    
-    statusPageUrl: https://${eureka.hostname}:${server.port}/actuator/info
-    healthCheckUrl: https://${eureka.hostname}:${server.port}/actuator/health
-    homePageUrl: https://${eureka.hostname}:${server.port}/
+    statusPageUrl: http://${eureka.hostname}:${server.port}/actuator/info
+    healthCheckUrl: http://${eureka.hostname}:${server.port}/actuator/health
+    homePageUrl: http://${eureka.hostname}:${server.port}/
 management:
   endpoint:
     health:
