@@ -38,8 +38,11 @@ eureka:
     fetchRegistry: true
     serviceUrl:
       defaultZone: http://bm-data-eureka-server.herokuapp.com/eureka
+      non-secure-port: 80
+      secure-port: 443
   instance:
     non-secure-port: 80
+    secure-port: 443
     hostname: bm-data-api.herokuapp.com
     statusPageUrl: https://${eureka.hostname}/actuator/info
     healthCheckUrl: https://${eureka.hostname}/actuator/health
