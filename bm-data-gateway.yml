@@ -2,16 +2,55 @@ spring:
   application:
     name: bm-data-gateway
   cloud:
+    discovery:
+      enabled: true
     gateway:
       discovery:
         locator:
           enabled: true
           lower-case-service-id: true
+      globalcors:
+        corsConfigurations:
+          '[/**]':
+            allowedOrigins: "*"
+            allowedMethods:
+            - GET
+            - POST
+            - DELETE
+            - PUT
+      httpclient:
+        ssl:
+          useInsecureTrustManager: true
   boot:
     admin:
       client:
+        auto-deregistration: true
+        instance:
+          service-url: https://localhost:8080/
+          name: Benchmarker Gateway
+          metadata:
+            user: 
+              name: shaddowuser
+              password: H7T*$
         url:
         - http://localhost:8765
+eureka:
+  enableSelfPreservation: true
+  registration:
+    enabled: true
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://bm-data-eureka-server.herokuapp.com/eureka
+      non-secure-port: 80
+      secure-port: 443
+  instance:
+    non-secure-port: 80
+    hostname: localhost
+    statusPageUrl: https://${eureka.hostname}:${server.port}/actuator/info
+    healthCheckUrl: https://${eureka.hostname}:${server.port}/actuator/health
+    homePageUrl: https://${eureka.hostname}:${server.port}/
 management:
   endpoint:
     health:
