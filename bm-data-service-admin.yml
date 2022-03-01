@@ -1,5 +1,5 @@
 spring:
   application:
-    name: bm-data-service-admin
+    name: Benchmarker Admin Server
 server:
   port: 8765
