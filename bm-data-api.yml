@@ -19,7 +19,7 @@ spring:
   datasource:
     driverClassName: org.h2.Driver
     password: ''
-    url: jdbc:h2:file:./src/main/resources/db/apitestdb
+    url: jdbc:h2:mem:bmapidb;DB_CLOSE_DELAY=-1
     username: sa
   h2:
     console:
