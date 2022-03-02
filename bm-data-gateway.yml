@@ -11,7 +11,7 @@ spring:
           keycloak-bm-data-gateway:
             provider: cfg-keycloak-provider
             client-id: bm-data-gateway
-            client-secret: newClientSecret
+            client-secret: dev-client-secret
             authorization-grant-type: password
             redirect-uri: '{baseUrl}/login/oauth2/code/keycloak'
   application:
