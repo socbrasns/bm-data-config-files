@@ -1,12 +1,12 @@
 server:
-  port: 8082
+  port: 8080
 spring:
   security:
     oauth2:
       client:
         provider:
           cfg-keycloak-provider:
-            issuer-uri: http://localhost:8080/auth/realms/cfg
+            issuer-uri: http://localhost:8083/auth/realms/cfg
         registration:
           keycloak-bm-data-gateway:
             provider: cfg-keycloak-provider
@@ -41,7 +41,7 @@ spring:
       client:
         auto-deregistration: true
         instance:
-          service-url: http://localhost:8082/
+          service-url: http://localhost:${server.port}/
           name: Benchmarker Gateway
           metadata:
             user: 
