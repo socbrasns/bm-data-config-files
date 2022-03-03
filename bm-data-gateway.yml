@@ -5,9 +5,7 @@ spring:
     discovery:
       enabled: true
     gateway:
-      default-filters:
-      - TokenRelay=
-      discovery:
+       discovery:
         locator:
           enabled: true
           lower-case-service-id: true
