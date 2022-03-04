@@ -20,6 +20,8 @@ spring:
     discovery:
       enabled: true
     gateway:
+     default-filters:
+     - TokenRelay=
       discovery:
         locator:
           enabled: true
